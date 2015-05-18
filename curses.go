@@ -39,6 +39,11 @@ func Cbreak() {
     C.cbreak()
 }
 
+// set read timeout
+func Timeout(delay int) {
+    C.timeout(C.int(delay))  
+}
+
 // Enable character echoing while reading.
 func Echo() {
     C.echo()
